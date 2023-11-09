@@ -1,5 +1,8 @@
 //css
 import styles from "./home.module.css";
+//cars
+import {cars} from "./cars.data.js";
+//const cars = []
 
 function Home() {
     return (
@@ -7,21 +10,29 @@ function Home() {
             <h1 className={styles.title}>
                 Car Catalog
             </h1>
+
             <div>
-                <div className={styles.item}>
-                    <div
-                    className={styles.img}
-                    style={{
-                        backgroundImage:'url(/1.jpg)',
-                    }}
-                    />
-                    <div className={styles.info}>
-                        <h2>Car 1</h2>
-                        <p>$100 000</p>
-                        <button>Read more</button>
+
+                {cars.length ? cars.map(car => (
+                    <div key={car.id} className={styles.item}>
+                        <div
+                        className={styles.img}
+                        style={{
+                            backgroundImage:`url(${car.image})`,
+                        }}
+                        />
+                        <div className={styles.info}>
+                            <h2>{car.name}</h2>
+                            <p>{car.price}</p>
+                            <button>Read more</button>
+                        </div>
                     </div>
-                </div>
+                ))
+                : <p>There are no cars</p>
+            }
+
             </div>
+
         </div>
     )
 };
