@@ -12,7 +12,7 @@ function CarItem({car}) {
             />
             <div className={styles.info}>
                 <h2>{car.name}</h2>
-                <p>{car.price}</p>
+                <p>{`${car.price}$`}</p>
                 <button>Read more</button>
             </div>
         </div>
