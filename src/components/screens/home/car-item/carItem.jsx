@@ -39,8 +39,16 @@ function CarItem({car}) {
         }
     }
 
+    //delete componrntCar
+
+    let CarClas =document.querySelector(`.${styles.item}`)
+
+    function CarDel() {
+        document.getElementById(car.id).classList.add('none')
+    }
+
     return(
-        <div className={styles.item}>
+        <div id={car.id} className={styles.item}>
             {
             /*we have img?*/
             carsIMG()
@@ -49,6 +57,7 @@ function CarItem({car}) {
                 <h2>{car.name}</h2>
                 <p>{`${car.price}$`}</p>
                 <button>Read more</button>
+                <button onClick={CarDel}>Delete</button>
             </div>
         </div>
     )

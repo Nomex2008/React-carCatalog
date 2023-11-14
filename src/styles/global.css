@@ -3,3 +3,6 @@ body {
     color: #fff;
     font-family: 'Kanit', sans-serif;
 }
+.none {
+    display: none;
+}
