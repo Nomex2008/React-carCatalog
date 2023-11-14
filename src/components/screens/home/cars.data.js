@@ -7,13 +7,13 @@ export const cars = [
     },
     {
         id: 2,
-        name: 'BMW V3',
+        name: 'Toyota Camry LE',
         price: 24970,
         image: '/2.jpg',
     },
     {
         id: 3,
-        name: 'BMW V3',
+        name: 'Honda Civic Hybrid',
         price: 22545,
         image: '/3.avif',
     },

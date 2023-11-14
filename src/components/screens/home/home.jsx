@@ -1,17 +1,19 @@
 //css
 import styles from "./home.module.css";
 //cars
-import {cars} from "./cars.data.js";
+import {cars as carsData} from "./cars.data.js";
 //const cars = []
 import CarItem from "./car-item/carItem.jsx";
 //CarForm
 import CreateCarForm from "./create-car-form/CreateCarForm";
+//useState
+import { useState } from "react";
 
 function Home() {
 
     //const filterCars =  useMemo(() => cars.filter(car => car.price > 0))
 
-
+    const [cars, setCars] = useState(carsData)
 
     return (
         <div className={styles.wrapper}>
@@ -20,7 +22,7 @@ function Home() {
                 Car Catalog
             </h1>
 
-            <CreateCarForm/>
+            <CreateCarForm setCars={setCars}/>
 
             <div>
                 {cars.length ? (

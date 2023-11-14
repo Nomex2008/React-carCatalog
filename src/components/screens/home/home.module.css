@@ -26,6 +26,16 @@
     margin: 0;
 }
 
+.error {
+    color: red;
+    font-size: 18px;
+
+    margin: 40px;
+}
+.error span {
+    color: #fff;
+}
+
 .info button{
     padding: 10px;
     border-radius: 10px;
