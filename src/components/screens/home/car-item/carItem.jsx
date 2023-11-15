@@ -39,27 +39,33 @@ function CarItem({car}) {
         }
     }
 
-    //delete componrntCar
-
-    let CarClas =document.querySelector(`.${styles.item}`)
-
+    //console.log(btnRemove)
     function CarDel() {
         document.getElementById(car.id).classList.add('none')
+        document.getElementById(car.id+200).classList.remove('btnRemove')
+    }
+    //remove componentCar
+    function CarRemove() {
+        document.getElementById(car.id).classList.remove('none')
+        document.getElementById(car.id+200).classList.add('btnRemove')
     }
 
     return(
-        <div id={car.id} className={styles.item}>
-            {
-            /*we have img?*/
-            carsIMG()
-            }
-            <div className={styles.info}>
-                <h2>{car.name}</h2>
-                <p>{`${car.price}$`}</p>
-                <button>Read more</button>
-                <button onClick={CarDel}>Delete</button>
+        <>
+            <div id={car.id} className={styles.item}>
+                {
+                /*we have img?*/
+                carsIMG()
+                }
+                <div className={styles.info}>
+                    <h2>{car.name}</h2>
+                    <p>{`${car.price}$`}</p>
+                    <button>Read more</button>
+                    <button onClick={CarDel}>Delete</button>
+                </div>
             </div>
-        </div>
+            <button onClick={CarRemove} className='btnRemove' id={car.id+200}>{car.id} Remove</button>
+        </>
     )
 }
 
