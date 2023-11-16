@@ -1,11 +1,6 @@
 import { useState } from 'react';
-//cars
-import {cars as carsData} from "../cars.data.js";
 //styles
 import styles from './CreateCarForm.module.css';
-
-let carKey = carsData.length + 1
-//console.log(carsData.length)
 
 const CreateCarForm = ({setCars}) => {
 
@@ -16,10 +11,8 @@ const CreateCarForm = ({setCars}) => {
     const createCar = e => {
         e.preventDefault()
         //console.log({name,price,image})
-        setCars(prev => [...prev, {id: carKey,name,price,image}]
+        setCars(prev => [...prev, { id: prev.length + 1,name,price,image}]
         )
-        ++carKey;
-        //console.log(carKey)
     }
 
     return <form className={styles.form}>

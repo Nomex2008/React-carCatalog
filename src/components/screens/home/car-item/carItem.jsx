@@ -42,12 +42,12 @@ function CarItem({car}) {
     //console.log(btnRemove)
     function CarDel() {
         document.getElementById(car.id).classList.add('none')
-        document.getElementById(car.id+200).classList.remove('btnRemove')
+        document.getElementById(car.id+'remove').classList.remove('btnRemove')
     }
     //remove componentCar
     function CarRemove() {
         document.getElementById(car.id).classList.remove('none')
-        document.getElementById(car.id+200).classList.add('btnRemove')
+        document.getElementById(car.id+'remove').classList.add('btnRemove')
     }
 
     return(
@@ -64,7 +64,7 @@ function CarItem({car}) {
                     <button onClick={CarDel}>Delete</button>
                 </div>
             </div>
-            <button onClick={CarRemove} className='btnRemove' id={car.id+200}>{car.id} Remove</button>
+            <button onClick={CarRemove} className='btnRemove btnAdd' id={car.id+'remove'}>{car.id} Remove</button>
         </>
     )
 }
