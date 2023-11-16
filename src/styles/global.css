@@ -6,23 +6,3 @@ body {
 .none {
     display: none;
 }
-.btnRemove {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    font-size: 0;
-}
-.btnAdd {
-    display: block;
-    padding: 5px 10px;
-    border-radius: 5px;
-
-    transition: color .3s ease, background-color .3s ease;
-
-    cursor: auto ;
-}
-.btnAdd:hover {
-    background-color: black;
-    color: #fff;
-    cursor: auto ;
-}

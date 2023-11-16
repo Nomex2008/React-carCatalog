@@ -1,5 +1,6 @@
 //css
 import styles from "../home.module.css";
+import "./carItemCSS.css";
 
 function CarItem({car}) {
 
@@ -17,11 +18,10 @@ function CarItem({car}) {
     
         return fileLinkRegex.test(str);
     }
-    let filleIS = isFileLink(car.image)
 
     const carsIMG = () => {
         //we have car img? else we have error
-        if (isURL(car.image) || filleIS) {
+        if (isURL(car.image) || isFileLink(car.image)) {
             return (
                 <div
                 className={styles.img}
